@@ -1,0 +1,128 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Maria & Rim | Our Fairytale 🦢</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div id="magic"></div>
+
+    <header class="hero">
+        <div class="swan">🦢</div>
+        <p class="eyebrow">A LITTLE WORLD FULL OF MAGIC</p>
+        <h1>Maria <span>&</span> Rim</h1>
+        <p class="subtitle">Two princesses, one endless friendship ♡</p>
+        <a href="#letters" class="main-button">Enter our fairytale ✨</a>
+        <div class="decor">✧ ˚ · . ♡ . · ˚ ✧</div>
+    </header>
+
+    <main>
+        <section class="intro">
+            <p class="eyebrow">OUR LITTLE UNIVERSE</p>
+            <h2>Welcome to our dreamy world 🌷</h2>
+            <p>
+                A little place made of memories, laughter, kindness
+                and a friendship that deserves its own fairytale.
+            </p>
+        </section>
+
+        <section id="letters" class="section">
+            <p class="eyebrow">JUST FOR YOU</p>
+            <h2>Secret Letters 💌</h2>
+            <p class="section-note">Choose your name to open your special letter.</p>
+
+            <div class="letter-grid">
+                <article class="letter-card">
+                    <div class="envelope">💌</div>
+                    <h3>For Maria</h3>
+                    <p>A little message just for you.</p>
+                    <button onclick="openLetter('maria')">Open my letter ♡</button>
+                    <div id="maria-letter" class="letter-message" hidden>
+                        Dear Maria,
+                        <br><br>
+                        You are a beautiful part of this little universe.
+                        May your days be filled with happiness, magical
+                        moments and reasons to smile.
+                        <br><br>
+                        Keep shining, princess! 🦢💗
+                    </div>
+                </article>
+
+                <article class="letter-card">
+                    <div class="envelope">💌</div>
+                    <h3>For Rim</h3>
+                    <p>A little message just for you.</p>
+                    <button onclick="openLetter('rim')">Open my letter ♡</button>
+                    <div id="rim-letter" class="letter-message" hidden>
+                        Dear Rim,
+                        <br><br>
+                        You make this friendship more special.
+                        May life bring you beautiful memories,
+                        peaceful days and endless reasons to smile.
+                        <br><br>
+                        Never stop being wonderful! 🌸💗
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <section id="memories" class="section">
+            <p class="eyebrow">LITTLE MOMENTS, BIG FEELINGS</p>
+            <h2>Our Memory Gallery 📸</h2>
+            <p class="section-note">Every picture holds a little story.</p>
+
+            <div class="gallery">
+                <figure class="memory">
+                    <img src="memory1.jpg" alt="Friendship memory one">
+                    <figcaption>Beautiful moments ♡</figcaption>
+                </figure>
+                <figure class="memory">
+                    <img src="memory2.jpg" alt="Friendship memory two">
+                    <figcaption>Our happy days 🌷</figcaption>
+                </figure>
+                <figure class="memory">
+                    <img src="memory3.jpg" alt="Friendship memory three">
+                    <figcaption>Forever memories ✨</figcaption>
+                </figure>
+            </div>
+            <p class="tiny-note">Add your own photos to make this gallery yours.</p>
+        </section>
+
+        <section class="music-section">
+            <p class="eyebrow">A MELODY FOR OUR WORLD</p>
+            <h2>Our Little Soundtrack 🎶</h2>
+            <p>Press play and enjoy the magic.</p>
+
+            <audio id="friendshipMusic" loop>
+                <source src="music.mp3" type="audio/mpeg">
+                Your browser does not support audio.
+            </audio>
+
+            <button id="musicButton" onclick="toggleMusic()">
+                ▶ Play music
+            </button>
+            <p id="musicStatus" class="tiny-note">Music is paused ♡</p>
+        </section>
+
+        <section class="final-message">
+            <div class="swan">🦢</div>
+            <h2>And they lived in a world of friendship...</h2>
+            <p>
+                Different stories, shared memories, and a bond
+                that makes life a little more magical.
+            </p>
+            <p class="signature">Maria & Rim — Best Friends Forever ♡</p>
+        </section>
+    </main>
+
+    <footer>
+        Made with love, sparkles and a little bit of magic ✨
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
