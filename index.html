@@ -1,128 +1,190 @@
 
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Maria & Rim | Our Fairytale 🦢</title>
+
+    <title>Yassine | Dark Vibes</title>
+
     <link rel="stylesheet" href="style.css">
+<link rel="manifest" href="./manifest.json">
+<meta name="theme-color" content="#100b0d">
 </head>
+
 <body>
 
-    <div id="magic"></div>
+    <!-- NAVIGATION -->
+    <header>
+        <h2>YASSINE.</h2>
 
-    <header class="hero">
-        <div class="swan">🦢</div>
-        <p class="eyebrow">A LITTLE WORLD FULL OF MAGIC</p>
-        <h1>Maria <span>&</span> Rim</h1>
-        <p class="subtitle">Two princesses, one endless friendship ♡</p>
-        <a href="#letters" class="main-button">Enter our fairytale ✨</a>
-        <div class="decor">✧ ˚ · . ♡ . · ˚ ✧</div>
+        <nav>
+            <a href="#home">Home</a>
+            <a href="#about">About</a>
+            <a href="#music">Music</a>
+            <a href="#favorites">Favorites</a>
+        </nav>
     </header>
 
-    <main>
-        <section class="intro">
-            <p class="eyebrow">OUR LITTLE UNIVERSE</p>
-            <h2>Welcome to our dreamy world 🌷</h2>
-            <p>
-                A little place made of memories, laughter, kindness
-                and a friendship that deserves its own fairytale.
-            </p>
-        </section>
 
-        <section id="letters" class="section">
-            <p class="eyebrow">JUST FOR YOU</p>
-            <h2>Secret Letters 💌</h2>
-            <p class="section-note">Choose your name to open your special letter.</p>
+    <!-- HOMEPAGE -->
+    <section id="home" class="hero">
 
-            <div class="letter-grid">
-                <article class="letter-card">
-                    <div class="envelope">💌</div>
-                    <h3>For Maria</h3>
-                    <p>A little message just for you.</p>
-                    <button onclick="openLetter('maria')">Open my letter ♡</button>
-                    <div id="maria-letter" class="letter-message" hidden>
-                        Dear Maria,
-                        <br><br>
-                        You are a beautiful part of this little universe.
-                        May your days be filled with happiness, magical
-                        moments and reasons to smile.
-                        <br><br>
-                        Keep shining, princess! 🦢💗
-                    </div>
-                </article>
+        <p>PERSONAL WEBSITE • EST. 2026</p>
 
-                <article class="letter-card">
-                    <div class="envelope">💌</div>
-                    <h3>For Rim</h3>
-                    <p>A little message just for you.</p>
-                    <button onclick="openLetter('rim')">Open my letter ♡</button>
-                    <div id="rim-letter" class="letter-message" hidden>
-                        Dear Rim,
-                        <br><br>
-                        You make this friendship more special.
-                        May life bring you beautiful memories,
-                        peaceful days and endless reasons to smile.
-                        <br><br>
-                        Never stop being wonderful! 🌸💗
-                    </div>
-                </article>
-            </div>
-        </section>
+        <h1>YASSINE.</h1>
 
-        <section id="memories" class="section">
-            <p class="eyebrow">LITTLE MOMENTS, BIG FEELINGS</p>
-            <h2>Our Memory Gallery 📸</h2>
-            <p class="section-note">Every picture holds a little story.</p>
+        <h2>DARK VIBES OUTSIDE.</h2>
 
-            <div class="gallery">
-                <figure class="memory">
-                    <img src="memory1.jpg" alt="Friendship memory one">
-                    <figcaption>Beautiful moments ♡</figcaption>
-                </figure>
-                <figure class="memory">
-                    <img src="memory2.jpg" alt="Friendship memory two">
-                    <figcaption>Our happy days 🌷</figcaption>
-                </figure>
-                <figure class="memory">
-                    <img src="memory3.jpg" alt="Friendship memory three">
-                    <figcaption>Forever memories ✨</figcaption>
-                </figure>
-            </div>
-            <p class="tiny-note">Add your own photos to make this gallery yours.</p>
-        </section>
+        <h2 class="red">PURE HEART INSIDE.</h2>
 
-        <section class="music-section">
-            <p class="eyebrow">A MELODY FOR OUR WORLD</p>
-            <h2>Our Little Soundtrack 🎶</h2>
-            <p>Press play and enjoy the magic.</p>
+        <p class="quote">
+            A little mystery, a lot of kindness.
+        </p>
 
-            <audio id="friendshipMusic" loop>
-                <source src="music.mp3" type="audio/mpeg">
-                Your browser does not support audio.
-            </audio>
+    </section>
 
-            <button id="musicButton" onclick="toggleMusic()">
-                ▶ Play music
-            </button>
-            <p id="musicStatus" class="tiny-note">Music is paused ♡</p>
-        </section>
 
-        <section class="final-message">
-            <div class="swan">🦢</div>
-            <h2>And they lived in a world of friendship...</h2>
-            <p>
-                Different stories, shared memories, and a bond
-                that makes life a little more magical.
-            </p>
-            <p class="signature">Maria & Rim — Best Friends Forever ♡</p>
-        </section>
-    </main>
+    <!-- ABOUT -->
+    <section id="about">
 
+        <h2>About Yassine</h2>
+
+        <p>
+            A quiet soul in a loud world.
+            A little mystery, a lot of kindness.
+        </p>
+
+        <p>Favorite colors: Black & Red</p>
+
+        <p>Favorite artist: The Neighbourhood</p>
+
+    </section>
+
+
+    <!-- MUSIC LIBRARY -->
+    
+
+<section id="music">
+
+    <div class="music-header">
+        <p class="music-label">HIS PERSONAL SOUNDTRACK</p>
+        <h2>YASSINE AFTER DARK</h2>
+        <p>Dark vibes outside. Pure heart inside.</p>
+        <p class="song-count">50 TRACKS · ONE MOOD</p>
+    </div>
+
+    <div class="playlist-card">
+
+        <h3>THE PLAYLIST 🖤</h3>
+
+        <p class="playlist-description">
+            A little mystery, a lot of music.
+        </p>
+
+        <ol class="track-list">
+            <li>The Neighbourhood — Sweater Weather</li>
+            <li>The Weeknd — After Hours</li>
+            <li>Lana Del Rey — West Coast</li>
+            <li>Billie Eilish — CHIHIRO</li>
+            <li>The Neighbourhood — Softcore</li>
+            <li>Mr.Kitty — After Dark</li>
+            <li>The Weeknd — Call Out My Name</li>
+            <li>Lana Del Rey — Brooklyn Baby</li>
+            <li>Billie Eilish — bury a friend</li>
+            <li>The Neighbourhood — Daddy Issues</li>
+            <li>The Weeknd — The Hills</li>
+            <li>Cigarettes After Sex — Apocalypse</li>
+            <li>Lana Del Rey — Young and Beautiful</li>
+            <li>Billie Eilish — ocean eyes</li>
+            <li>The Neighbourhood — Reflections</li>
+            <li>The Weeknd — Die For You</li>
+            <li>Lana Del Rey — Cinnamon Girl</li>
+            <li>Billie Eilish — WILDFLOWER</li>
+            <li>The Neighbourhood — The Beach</li>
+            <li>Arctic Monkeys — I Wanna Be Yours</li>
+            <li>Lana Del Rey — Say Yes to Heaven</li>
+            <li>The Weeknd — Stargirl Interlude</li>
+            <li>Billie Eilish — when the party's over</li>
+            <li>The Neighbourhood — You Get Me So High</li>
+            <li>Mareux — The Perfect Girl</li>
+            <li>Jung Kook — Standing Next to You</li>
+            <li>Jung Kook — 3D</li>
+            <li>Jung Kook — Yes or No</li>
+            <li>Jung Kook — Closer to You</li>
+            <li>Jung Kook — Somebody</li>
+            <li>Jung Kook — Hate You</li>
+            <li>Jung Kook — Too Sad to Dance</li>
+            <li>Jung Kook — Shot Glass of Tears</li>
+            <li>The Weeknd — Starboy</li>
+            <li>Billie Eilish — bad guy</li>
+            <li>Lana Del Rey — Summertime Sadness</li>
+            <li>The Neighbourhood — Afraid</li>
+            <li>The Weeknd — Often</li>
+            <li>Chase Atlantic — Swim</li>
+            <li>Steve Lacy — Dark Red</li>
+            <li>The Neighbourhood — Pretty Boy</li>
+            <li>Billie Eilish — NDA</li>
+            <li>Lana Del Rey — Radio</li>
+            <li>The Weeknd — Save Your Tears</li>
+            <li>Arctic Monkeys — 505</li>
+            <li>The Neighbourhood — Nervous</li>
+            <li>Billie Eilish — everything i wanted</li>
+            <li>The Weeknd — Wicked Games</li>
+            <li>The Neighbourhood — A Little Death</li>
+            <li>The Weeknd — Earned It</li>
+        </ol>
+
+        <div class="music-upload">
+            <h3>ADD HIS MUSIC</h3>
+            <p>Choose audio files from your computer.</p>
+
+            <input type="file" id="songFile"
+                   accept="audio/*" multiple>
+<p id="nowPlaying">NO SONG PLAYING</p>
+
+<div class="music-controls">
+    <button id="previousBtn">PREVIOUS</button>
+    <button id="playPauseBtn">PLAY</button>
+    <button id="nextBtn">NEXT</button>
+</div>
+
+<audio id="player"></audio>
+        </div>
+
+    </div>
+
+</section>
+
+
+
+    <!-- FAVORITES -->
+    <section id="favorites">
+
+        <h2>His Favorites</h2>
+
+        <p>Favorite artist: The Neighbourhood</p>
+
+        <p>Favorite colors: Black & Red</p>
+
+        <p>Favorite vibe: Dark aesthetic</p>
+
+    </section>
+
+
+    <!-- FOOTER -->
     <footer>
-        Made with love, sparkles and a little bit of magic ✨
+
+        <p>BLACK • RED • MUSIC • PERSONALITY</p>
+
+        <p>Made specially for Yassine 🖤</p>
+
     </footer>
 
+
     <script src="script.js"></script>
+
 </body>
+
 </html>

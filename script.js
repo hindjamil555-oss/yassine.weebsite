@@ -1,67 +1,111 @@
+```javascript
+// YASSINE AFTER DARK - MUSIC PLAYER 🖤
 
-// SECRET LETTERS
-function openLetter(name) {
-    const letter = document.getElementById(name + "-letter");
+const songInput = document.getElementById("songFile");
+const player = document.getElementById("player");
 
-    letter.hidden = !letter.hidden;
+const previousBtn = document.getElementById("previousBtn");
+const playPauseBtn = document.getElementById("playPauseBtn");
+const nextBtn = document.getElementById("nextBtn");
+const nowPlaying = document.getElementById("nowPlaying");
 
-    const button = letter.previousElementSibling;
+let songs = [];
+let currentSong = 0;
+let currentURL = null;
 
-    if (button && button.tagName === "BUTTON") {
-        button.textContent = letter.hidden
-            ? "Open my letter ♡"
-            : "Close my letter ♡";
+// CHOOSE MUSIC
+songInput.addEventListener("change", function(event) {
+    songs = Array.from(event.target.files);
+
+    if (songs.length > 0) {
+        playSong(0);
     }
-}
-
-// MUSIC PLAYER
-const music = document.getElementById("friendshipMusic");
-const musicButton = document.getElementById("musicButton");
-const musicStatus = document.getElementById("musicStatus");
-
-function toggleMusic() {
-    if (music.paused) {
-        music.play()
-            .then(() => {
-                musicButton.textContent = "❚❚ Pause music";
-                musicStatus.textContent = "Music is playing ♡";
-            })
-            .catch(() => {
-                musicStatus.textContent =
-                    "Please add your music.mp3 file first ♡";
-            });
-    } else {
-        music.pause();
-        musicButton.textContent = "▶ Play music";
-        musicStatus.textContent = "Music is paused ♡";
-    }
-}
-
-music.addEventListener("ended", () => {
-    musicButton.textContent = "▶ Play music";
-    musicStatus.textContent = "Music is paused ♡";
 });
 
-// MAGICAL FLOATING HEARTS AND STARS
-const magic = document.getElementById("magic");
-const decorations = ["♡", "✧", "✨", "🌸", "💕"];
+// PLAY SONG
+function playSong(index) {
+    if (index < 0 || index >= songs.length) return;
 
-function createMagic() {
-    const item = document.createElement("span");
+    currentSong = index;
 
-    item.className = "floating";
-    item.textContent =
-        decorations[Math.floor(Math.random() * decorations.length)];
+    if (currentURL) {
+        URL.revokeObjectURL(currentURL);
+    }
 
-    item.style.left = Math.random() * 100 + "vw";
-    item.style.fontSize = (14 + Math.random() * 20) + "px";
-    item.style.animationDuration = (5 + Math.random() * 5) + "s";
+    currentURL = URL.createObjectURL(songs[index]);
 
-    magic.appendChild(item);
+    player.src = currentURL;
+    nowPlaying.textContent = "NOW PLAYING: " + songs[index].name;
 
-    setTimeout(() => {
-        item.remove();
-    }, 10000);
+    player.play();
+    playPauseBtn.textContent = "PAUSE";
 }
 
-setInterval(createMagic, 600);
+// PLAY / PAUSE
+playPauseBtn.addEventListener("click", function() {
+    if (songs.length === 0) {
+        nowPlaying.textContent = "CHOOSE YOUR MUSIC FIRST";
+        return;
+    }
+
+    if (player.paused) {
+        player.play();
+        playPauseBtn.textContent = "PAUSE";
+    } else {
+        player.pause();
+        playPauseBtn.textContent = "PLAY";
+    }
+});
+
+// NEXT SONG
+function nextSong() {
+    if (songs.length === 0) return;
+
+    let next = (currentSong + 1) % songs.length;
+    playSong(next);
+}
+
+nextBtn.addEventListener("click", nextSong);
+
+// PREVIOUS SONG
+function previousSong() {
+    if (songs.length === 0) return;
+
+    let previous = currentSong - 1;
+
+    if (previous < 0) {
+        previous = songs.length - 1;
+    }
+
+    playSong(previous);
+}
+
+previousBtn.addEventListener("click", previousSong);
+
+// AUTOMATIC NEXT SONG
+player.addEventListener("ended", nextSong);
+
+// UPDATE BUTTON WHEN SONG ENDS OR PAUSES
+player.addEventListener("pause", function() {
+    playPauseBtn.textContent = "PLAY";
+});
+
+player.addEventListener("play", function() {
+    playPauseBtn.textContent = "PAUSE";
+});
+
+console.log("YASSINE AFTER DARK PLAYER READY 🖤");
+```
+// REGISTER OFFLINE SERVICE WORKER
+
+if ("serviceWorker" in navigator) {
+    window.addEventListener("load", function() {
+        navigator.serviceWorker.register("./service-worker.js")
+            .then(function() {
+                console.log("Offline mode is ready!");
+            })
+            .catch(function(error) {
+                console.log("Offline mode error:", error);
+            });
+    });
+}
